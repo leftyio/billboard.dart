@@ -1410,28 +1410,28 @@ abstract class ChartOptions {
           v);
 
   /// Set a callback to execute when the chart is initialized.
-  external void oninit(/*Chart this*/);
+  external set oninit(void Function() VoidFunc);
 
   /// Set a callback to execute after the chart is initialized
-  external void onafterinit(/*Chart this*/);
+  external set onafterinit(void Function() VoidFunc);
 
   /// Set a callback to execute before the chart is initialized
-  external void onbeforeinit(/*Chart this*/);
+  external set onbeforeinit(void Function() VoidFunc);
 
   /// Set a callback which is executed when the chart is rendered. Basically, this callback will be called in each time when the chart is redrawed.
-  external void onrendered(/*Chart this*/);
+  external set onrendered(void Function() VoidFunc);
 
   /// Set a callback to execute when mouse/touch enters the chart.
-  external void onover(/*Chart this*/);
+  external set onover(void Function() VoidFunc);
 
   /// Set a callback to execute when mouse/touch leaves the chart.
-  external void onout(/*Chart this*/);
+  external set onout(void Function() VoidFunc);
 
   /// Set a callback to execute when user resizes the screen.
-  external void onresize(/*Chart this*/);
+  external set onresize(void Function() VoidFunc);
 
   /// Set a callback to execute when screen resize finished.
-  external void onresized(/*Chart this*/);
+  external set onresized(void Function() VoidFunc);
 
   /// Set 'clip-path' attribute for chart element.
   /// When is false, chart node element is positioned after the axis node in DOM tree hierarchy.
@@ -1826,6 +1826,8 @@ abstract class LegendOptions {
 @anonymous
 @JS()
 abstract class TooltipOptions {
+  external factory TooltipOptions();
+
   /// Show or hide tooltip.
   external bool get show;
   external set show(bool v);
@@ -2587,6 +2589,9 @@ abstract class LineOptions {
 @JS()
 abstract class Data {
   external factory Data();
+
+  external dynamic get unload;
+  external set unload(dynamic v);
 
   /// Load a CSV or JSON file from a URL.
   /// Note that this will not work if loading via the "file://" protocol as most browsers with block XMLHTTPRequests.

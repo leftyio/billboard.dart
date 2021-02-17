@@ -438,6 +438,8 @@ abstract class XTickConfiguration {
 @anonymous
 @JS()
 abstract class YTickConfiguration {
+  external factory YTickConfiguration({int count, dynamic format});
+
   /// Show or hide outer tick.
   external bool get outer;
   external set outer(bool v);
