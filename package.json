@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "generate": "dart_js_facade_gen --destination=lib/src/generated --base-path=billboard.js/types/ billboard.js/types/plugin/*.d.ts billboard.js/types/plugin/**/*.d.ts billboard.js/types/*.d.ts"
+  },
+  "dependencies": {
+    "billboard": "^1.0.0",
+    "d3": "^6.5.0",
+    "js_facade_gen": "https://github.com/sestegra/js_facade_gen.git"
+  }
+}

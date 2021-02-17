@@ -1,10 +1,3 @@
-A generated Dart API for [billboard.js](https://naver.github.io/billboard.js/)
-using [pkg/js](https://pub.dartlang.org/packages/js) and
-[dart_js_facade_gen](https://github.com/dart-lang/js_facade_gen).
-
-## Example
-
-```dart
 import 'dart:html';
 
 import 'package:billboard/billboard.dart';
@@ -42,4 +35,3 @@ void main() {
       ['data2', 100, 200, 150, 50, 100, 250]
     ]);
 }
-```
