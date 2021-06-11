@@ -1,6 +1,6 @@
 name: billboard
 description: Dart interop for billboard.js charts library
-version: 0.1.0
+version: 0.2.0
 homepage: https://github.com/leftyio/billboard.dart
 
 environment:

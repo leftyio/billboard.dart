@@ -2982,31 +2982,32 @@ abstract class Data {
   /// Set a callback for click event on each data point.
   /// This callback will be called when each data point clicked and will receive d and element as the arguments.
   /// - d is the data clicked and element is the element clicked. In this callback, this will be the Chart object.
-  external void onclick(/*Chart this*/ DataItem d, SvgElement element);
+  external set onclick(MouseEventCallback fn);
 
   /// Set a callback for mouse/touch over event on each data point.
   /// This callback will be called when mouse cursor or via touch moves onto each data point and will receive d as the argument.
   /// - d is the data where mouse cursor moves onto. In this callback, this will be the Chart object.
-  external void onover(/*Chart this*/ DataItem d, [SvgElement element]);
+  external set onover(MouseEventCallback fn);
 
   /// Set a callback for mouse/touch event on each data point.
   /// This callback will be called when mouse cursor moves out each data point and will receive d as the argument.
   /// - d is the data where mouse cursor moves out. In this callback, this will be the Chart object.
-  external void onout(/*Chart this*/ DataItem d, [SvgElement element]);
+  external set onout(MouseEventCallback fn);
 
   /// Set a callback for on data selection.
-  external void onselected(/*Chart this*/ DataItem d, [SvgElement element]);
+  external set onselected(MouseEventCallback fn);
 
   /// Set a callback for on data un-selection.
-  external void onunselected(/*Chart this*/ DataItem d, [SvgElement element]);
+  external set onunselected(MouseEventCallback fn);
 
   /// Set a callback for minimum data
   /// - NOTE: For 'area-line-range' and 'area-spline-range', mid data will be taken for the comparison
-  external void onmin(/*Chart this*/ List<DataItem> d);
+  external set onmin(void Function(/*Chart this*/ List<DataItem> d) fn);
 
   /// Set a callback for maximum data
   /// - NOTE: For 'area-line-range' and 'area-spline-range', mid data will be taken for the comparison
-  external void onmax(/*Chart this*/ List<DataItem> d);
+  external set onmax(void Function(/*Chart this*/ List<DataItem> d) fn);
 }
 
 typedef void FormatFunction(/*Chart this*/ dynamic v, String id, num i, num j);
+typedef MouseEventCallback = void Function(/*Chart this*/ DataItem d, [SvgElement element]);
